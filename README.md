@@ -12,3 +12,9 @@ A primitive and an inefficient implementation of LATS for usage alongside Ollama
 ##The Reason
 
 The implementation I used as a source is very robust and is very explanative. However, it is only usable for OpenAI API. This is due to how bind_tools works. Both of them work fundementally different in how they call their tools. There exists a solution in the form of Langchain called OllamaFunctions but I found it to be incomplete. Hence I developed this expendable framework to support different APIs.
+
+This implementation is a bit incomplete and inefficient.
+
+Things to look for:
+- There exists no leaf parallelization. (That is each node is done once by once while we can parallelize in expansion doing in batch. This is easy to implement.)
+- I couldn't get OpenAI to work with it however the fix should be easy. (The reason I found is due to message roles.)
