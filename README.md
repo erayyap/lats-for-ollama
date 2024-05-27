@@ -5,11 +5,12 @@ The original paper implementation is here (Though I discovered it after I did th
 
 Here are the sources I used (Except Langchain documentation.):
 Implementation of LATS: https://github.com/langchain-ai/langgraph/blob/main/examples/lats/lats.ipynb
+
 Calling tools in Langchain: https://medium.com/pythoneers/power-up-ollama-chatbots-with-tools-113ed8229a7a
 
 A primitive and an inefficient implementation of LATS for usage alongside Ollama. It can possibly be extended to support every API out there.
 
-##The Reason
+## The Reason
 
 The implementation I used as a source is very robust and is very explanative. However, it is only usable for OpenAI API. This is due to how bind_tools works. Both of them work fundementally different in how they call their tools. There exists a solution in the form of Langchain called OllamaFunctions but I found it to be incomplete. Hence I developed this expendable framework to support different APIs.
 
